@@ -26,5 +26,16 @@ pipeline {
                 sh './jenkins/scripts/deliver.sh'
             }
         }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying'
+				pushToCloudFoundry(
+				  target: 'api.run.pivotal.io',
+				  organization: 'Channel',
+				  cloudSpace: 'cdevarenne',
+				  credentialsId: 'cc552891-a30a-4a98-bb1f-1ea2137bad04'
+				)
+            }
+        }
     }
 }
