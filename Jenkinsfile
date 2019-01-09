@@ -32,8 +32,8 @@ pipeline {
 		manifestChoice: [
 		  appName: 'simple-java-maven-app', 
 		  appPath: 'target/my-app-1.0-SNAPSHOT.jar', 
-		  buildpack: '', command: '', domain: '', hostname: 'simple-java-maven-app', instances: '1', memory: '1024', 
-		  noRoute: 'false', stack: '', timeout: '60', value: 'jenkinsConfig'
+		  instances: '1', memory: '1024', 
+		  value: 'jenkinsConfig'
 		]
 		)
             }
